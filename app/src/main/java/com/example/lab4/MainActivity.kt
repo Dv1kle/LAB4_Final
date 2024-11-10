@@ -39,7 +39,12 @@ class MainActivity : AppCompatActivity() {
     private fun loadNotes() {
         val sharedPreferences = getSharedPreferences("notes", MODE_PRIVATE)
         notes.clear()
-        sharedPreferences.all.keys.forEach { notes.add(it) }
+
+        sharedPreferences.all.forEach { (title, content) ->
+            val displayText = "$title\n$content"
+            notes.add(displayText)
+        }
+
         noteListView.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, notes)
     }
 }

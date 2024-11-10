@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <!-- MainActivity, set as the launcher activity -->
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -20,12 +20,11 @@
             </intent-filter>
         </activity>
 
-        <!-- AddNoteActivity, accessible within the app only -->
+
         <activity
             android:name=".AddNoteActivity"
             android:exported="false" />
 
-        <!-- DeleteNoteActivity, accessible within the app only -->
         <activity
             android:name=".DeleteNoteActivity"
             android:exported="false" />
